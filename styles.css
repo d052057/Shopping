@@ -1,0 +1,38 @@
+html, body, input, select, textarea {
+    font-size: 1.05rem !important;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+tfoot tr {
+    text-align: right;
+    font-weight: bold
+}
+
+th:nth-child(n+4):nth-child(-n+6),
+td:nth-child(n+4):nth-child(-n+6),
+td input {
+    text-align: right
+}
+
+/* hide the blue outline */
+.form-control:focus,
+.custom-select {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+
+.textRed {
+    color: red;
+}
+
+.pointer {
+    cursor: pointer;
+}
+

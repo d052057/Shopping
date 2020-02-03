@@ -1,0 +1,70 @@
+<h1 id='tableLabel'>AngularJS Directives</h1>
+
+<p>This component demonstrates to use Directives.</p>
+<div class='form-group'>
+    <div class="alert alert-{{ alerts.typeInfo }}" role="alert" ng-style='{display: showAlert}'>
+        {{ alerts.messageInfo }}
+    </div>
+    <div class='row'>
+        <div class='input-group mb-12'>
+            <div class='input-group-prepend'>
+                <label class='input-group-text' for='storeOption'>Store Options</label>
+            </div>
+
+            <select class='custom-select' id='storename' ng-model='selectedStore' ng-change='onStoreChangeHandler($event)' aria-describedby='storeOption'>
+                <option ng-repeat='s in stores' value='{{ s.storeIndex }}'>{{ s.storeName | uppercase }}</option>
+            </select>
+
+        </div>
+    </div>
+    <div ng-style='{display: showProduct}' class="row">
+        <div class="col-xs-12 col-md-6 col-md-push-6 ml-auto mb-3 mt-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class='input-group-text bg-transparent'><i class="fa fa-search"></i></span>
+                </div>
+                <input class="form-control py-2 border-left-0 border" type="search" value="search" ng-model="searchFor.productDescription">
+            </div>
+        </div>
+        <!-- TABLE-->
+        <div class='col-md-12'>
+            <table class='table table-striped' aria-labelledby='tableLabel'>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Item Description</th>
+                        <th>UM</th>
+                        <th>Quantity</th>
+                        <!--***** dont work *****-->
+                        <!--<th class="pointer" (click)="sort('price')">Price <span><i [ngClass]="isDesc ? 'fa fa-sort-down':'fa fa-sort-up'"></i></span></th>-->
+                        <!--******* work around *******-->
+                        <th class="pointer" ng-click="sortPrice()">
+                            Price
+                            <span ng-style='{display: upIconDisplay }'><i class="fa fa-sort-up"></i></span><span ng-style='{display: downIconDisplay }'><i class="fa fa-sort-down"></i></span>
+                        </th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="p in newStoreArray | filter:searchFor  | orderBy:sortOrder">
+                        <td>{{ p.category }}</td>
+                        <td>{{ p.productDescription }}</td>
+                        <td>{{ p.unitMeasurement }}</td>
+                        <td><input type="number" step="1" name='quantity-{{ $index }}' ng-model='p.quantity' class='form-control' min="0" /></td>
+                        <td>
+                            <span  data-toggle="tooltip" title='{{ p.note }}'  ng-class="{'textRed':  p.note !== 'This is the best price!' }" >{{ p.price | currency }}</span>
+                        </td>
+                        <td>{{ p.price * p.quantity | currency }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan='5'>Grand Total</td>
+                        <td>{{ getSum() | currency }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- END TABLE-->
+    </div>
+</div>

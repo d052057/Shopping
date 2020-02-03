@@ -1,0 +1,114 @@
+[
+    {
+        "storeNumber": 1,
+        "category": "Dairy",
+        "productDescription": "Milk",
+        "quantity": 1,
+        "price": 6.50,
+        "unitMeasurement": "Gallons",
+        "note": ""     
+    },
+    {
+        "storeNumber": 1,
+        "category": "Meats",
+        "productDescription": "Beef",
+        "quantity": 1,
+        "price": 25.00,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+    {
+        "storeNumber": 1,
+        "category": "Frozen Food",
+        "productDescription": "Pork",
+        "quantity": 1,
+        "price": 12.50,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+    {
+        "storeNumber": 1,
+        "category": "Produce",
+        "productDescription": "Apple",
+        "quantity": 1,
+        "price": 2.30,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+
+
+    {
+        "storeNumber": 2,
+        "category": "Dairy",
+        "productDescription": "Milk",
+        "quantity": 1,
+        "price": 4.50,
+        "unitMeasurement": "Gallons",
+        "note": ""
+    },
+    {
+        "storeNumber": 2,
+        "category": "Meats",
+        "productDescription": "Beef",
+        "quantity": 1,
+        "price": 40.00,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+    {
+        "storeNumber": 2,
+        "category": "Frozen Food",
+        "productDescription": "Pork",
+        "quantity": 1,
+        "price": 10.85,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+    {
+        "storeNumber": 2,
+        "category": "Produce",
+        "productDescription": "Apple",
+        "quantity": 1,
+        "price": 2.40,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+
+    {
+        "storeNumber": 3,
+        "category": "Dairy",
+        "productDescription": "Milk",
+        "quantity": 1,
+        "price": 7.00,
+        "unitMeasurement": "Gallons",
+        "note": ""
+    },
+    {
+        "storeNumber": 3,
+        "category": "Meats",
+        "productDescription": "Beef",
+        "quantity": 1,
+        "price": 17.99,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+    {
+        "storeNumber": 3,
+        "category": "Frozen Food",
+        "productDescription": "Pork",
+        "quantity": 1,
+        "price": 21.99,
+        "unitMeasurement": "pounds",
+        "note": ""
+    },
+    {
+        "storeNumber": 3,
+        "category": "Produce",
+        "productDescription": "Apple",
+        "quantity": 1,
+        "price": 3.04,
+        "unitMeasurement": "pounds",
+        "note": ""
+    }
+]
+
